@@ -133,6 +133,12 @@ body{
   justify-content:flex-start;
   max-width:250px;
 }
+.img-wrap{
+  width:10rem;
+  height:8rem;
+  position:relative;
+  display:block;
+}
 .img-desc_incendie div{
   font-size:calc(-15px + 2.5rem);
   position:relative;
@@ -172,6 +178,12 @@ body{
   justify-content:flex-start;
   max-width:250px;
 }
+.img-wrap{
+  width:10rem;
+  height:8rem;
+  position:relative;
+  display:block;
+}
 .img-desc_consomm div{
   font-size:calc(-15px + 2.5rem);
   position:relative;
@@ -210,6 +222,15 @@ body{
   width:50%;
   height:auto;
 }
+.max_cont{
+  width:max-content;
+}
+.img-wrap{
+  width:10rem;
+  height:8rem;
+  position:relative;
+  display:block;
+}
 .bottom-section_sec .bottom-section_sec_main{
   display:flex;
   position:relative;
@@ -236,6 +257,12 @@ body{
 .img-desc_sec div img.bar2{
   width:50%;
 }
+.alerte_html_css_covid{
+  position:relative;
+  width:100%;
+  height:100%;
+  background-color:rgb(141, 210, 238);
+}
 .main_text_covid div{
   font-size:calc(2rem + 4vw);
   position:relative;
@@ -249,13 +276,50 @@ body{
   width:80%;
   height:auto;
 }
+.main_text_covid{
+  top:calc(85% - 2vh);
+  left:43%;
+  position:absolute;
+  width:max-content;
+  letter-spacing:0px;
+}
+.main-section_cov_main{
+  display:flex;
+  position:relative;
+  justify-content:flex-start;
+  max-width:250px;
+}
+.main_section_covid{
+  position:relative;
+  top:calc(2% + 90px);
+  left:15%;
+  width:100%;
+}
 .main_section_covid .img-wrap{
   width:13rem;
   height:11rem;
 }
+.main_column_covid{
+  position:absolute;
+  display:flex;
+  flex-direction:column;
+  row-gap:calc(60px - 1vh);
+  bottom:calc(2% + 40px);
+  left:5%;
+}
 .main_column_covid > div, .main_column_covid_alt div{
   display:flex;
   justify-content:flex-start;
+}
+.img_thumb_covid{
+  display:block;
+  position:relative;
+  width:inherit;
+  height:inherit;
+}
+.img-desc_covid{
+  position:relative;
+  margin-left:10%;
 }
 .img-desc_covid div{
   font-size:calc(-15px + 3.3rem);
@@ -286,6 +350,9 @@ body{
   height:13%;
   margin-top:10%;
 }
+.main_column_covid_alt{
+  display:none;
+}
 .img-desc_covid div img.bar1, .img-desc_covid_alt div img.bar1{
   width:70%;
 }
@@ -296,6 +363,10 @@ body{
 }
 .img-desc_covid div img.bar2, .img-desc_covid_alt div img.bar2{
   width:50%;
+}
+.img-desc_covid_alt{
+  position:relative;
+  margin-left:10%;
 }
 .main_text_intr div{
   font-size:calc(5rem + 2vw);
@@ -337,6 +408,17 @@ body{
 .img-desc_intr div img.bar2{
   width:50%;
 }
+.max_cont{
+  width:max-content;
+}
+.navbar-brand{
+  position:fixed;
+  top:15px;
+  left:20px;
+  font-size:1.25rem;
+  white-space:nowrap;
+  color:white;
+}
 .navbar-brand img{
   display:inline-block;
   width:45px;
@@ -346,46 +428,16 @@ body{
 .navbar-brand span{
   font-weight:700;
 }
-.container_black_filter{
+.text_center_cont element span{
+  font-size:calc(18px + 4vw);
+  font-weight:400;
+}
+textarea{
   position:relative;
-  width:100%;
-  height:100%;
-  background-color:rgba(0, 0, 0, 0.7);
-  background-position-x:0%;
-  background-position-y:0%;
-  background-repeat:repeat;
-  background-attachment:scroll;
-  background-image:none;
-  background-size:auto;
-  background-origin:padding-box;
-  background-clip:border-box;
-  color:rgba(255, 255, 255, 0.8);
-  font-family:calibri;
-}
-.titre{
-  position:relative;
-  word-break:break-all;
-  font-size:calc(16px + 4vw);
-  font-weight:700;
-}
-.sous-titre{
-  position:relative;
-  word-break:break-all;
-  margin-top:10px;
-  font-size:calc(14px + 3vw);
-  font-weight:500;
-}
-.titre-cont{
-  position:fixed;
-  left:5%;
-  top:5%;
-}
-.image_effect{
-  position:absolute;
-  width:100%;
-  height:100%;
-  filter:opacity(0.2) blur(5px);
-  object-fit:cover;
+  display:block;
+  width:auto;
+  font-size:calc(18px + 4vw);
+  font-weight:400;
 }
 .row > *{
   flex-shrink:0;
@@ -394,6 +446,10 @@ body{
   padding-right:calc(var(--bs-gutter-x) * .5);
   padding-left:calc(var(--bs-gutter-x) * .5);
   margin-top:var(--bs-gutter-y);
+}
+.mx-auto{
+  margin-right:auto !important;
+  margin-left:auto !important;
 }
 .row-cols-auto > *{
   flex-grow:0;
@@ -437,6 +493,12 @@ body{
   flex-basis:auto;
   width:16.6667%;
 }
+.col-auto{
+  flex-grow:0;
+  flex-shrink:0;
+  flex-basis:auto;
+  width:auto;
+}
 px-0{
   padding-left:0px !important;
 }
@@ -456,9 +518,45 @@ px-0{
     transform:rotate(360deg);
   }
 }
+@media (max-width: 1500px){
+  .main_column_covid{
+    transform:scale(0.7);
+    transform-origin:0px 0px 0px;
+    bottom:calc(-8% - 50px);
+  }
+}
+@media (max-width: 1200px){
+  .main_text_covid{
+    top:calc(85% - 2vh);
+  }
+  .main_column_covid{
+    transform:scale(0.5);
+    transform-origin:0px 0px 0px;
+  }
+}
 @media (max-width: 992px){
+  .tablet{
+    transform:scale(0.6);
+    transform-origin:0px 0px 0px;
+  }
   .bottom-section > div:nth-child(2){
     margin-top:10%;
+  }
+  .tablet{
+    transform:scale(0.6);
+    transform-origin:0px 0px 0px;
+  }
+  .tablet{
+    transform:scale(0.6);
+    transform-origin:0px 0px 0px;
+  }
+  .tablet{
+    transform:scale(0.6);
+    transform-origin:0px 0px 0px;
+  }
+  .img-wrap{
+    width:7rem;
+    height:5rem;
   }
   .bottom-section_incendie > div:nth-child(2){
     margin-top:10%;
@@ -466,13 +564,49 @@ px-0{
   .bottom-section_consomm > div:nth-child(2){
     margin-top:10%;
   }
+  .tablet{
+    transform:scale(0.6);
+    transform-origin:0px 0px 0px;
+  }
+  .main_text_covid{
+    top:calc(90% - 2vh);
+    left:15%;
+  }
+  .main_column_covid_alt{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    margin-top:calc(2% + 90px);
+    margin-right:10%;
+    width:90%;
+    row-gap:calc(2rem + 5vh);
+  }
+  .main_section_covid{
+    top:calc(2% + 50px);
+    left:20%;
+  }
+  .main_column_covid{
+    display:none;
+  }
   .main_section_covid > img.main{
     content:url("https://user-images.githubusercontent.com/47604307/223457044-66e4e36f-7815-4fcd-9b64-6eaddb0868e5.png");
     width:50%;
     height:auto;
   }
+  .tablet{
+    transform:scale(0.6);
+    transform-origin:0px 0px 0px;
+  }
+  .tablet_logo{
+    transform:scale(0.8);
+    transform-origin:0px 0px 0px;
+  }
 }
 @media (max-width: 992px) and (min-width: 768px){
+  .tablet{
+    transform:scale(0.6);
+    transform-origin:0px 0px 0px;
+  }
   .test_ img{
     width:80%;
     height:80%;
@@ -482,8 +616,43 @@ px-0{
   }
 }
 @media (max-width: 768px){
+  .mobile_l{
+    transform:scale(0.4);
+    transform-origin:0px 0px 0px;
+  }
   .main_container_newYear img{
     content:url("dist/assets/nv_an_alt1.png");
+  }
+  .mobile_l{
+    transform:scale(0.4);
+    transform-origin:0px 0px 0px;
+  }
+  .mobile_l{
+    transform:scale(0.4);
+    transform-origin:0px 0px 0px;
+  }
+  .mobile_l{
+    transform:scale(0.4);
+    transform-origin:0px 0px 0px;
+  }
+  .img-wrap{
+    width:5rem;
+    height:4rem;
+  }
+  .mobile_l{
+    transform:scale(0.4);
+    transform-origin:0px 0px 0px;
+  }
+  .main_text_covid{
+    top:calc(93% - 2vh);
+  }
+  .mobile_l{
+    transform:scale(0.4);
+    transform-origin:0px 0px 0px;
+  }
+  .mobile_l_logo{
+    transform:scale(0.6);
+    transform-origin:0px 0px 0px;
   }
 }
 @media (min-width: 576px){
@@ -530,7 +699,19 @@ px-0{
     width:16.6667%;
   }
 }
+@media (min-width: 576px) and (max-width: 768px){
+  .col-sm-12{
+    flex-grow:0;
+    flex-shrink:0;
+    flex-basis:auto;
+    width:100%;
+  }
+}
 @media (max-width: 768px) and (min-width: 480px){
+  .mobile_l{
+    transform:scale(0.4);
+    transform-origin:0px 0px 0px;
+  }
   .test_ img{
     width:50%;
     height:50%;
@@ -580,6 +761,14 @@ px-0{
     width:16.6667%;
   }
 }
+@media (min-width: 768px) and (max-width: 992px){
+  .col-md-12{
+    flex-grow:0;
+    flex-shrink:0;
+    flex-basis:auto;
+    width:100%;
+  }
+}
 @media (min-width: 992px){
   .row-cols-lg-auto > *{
     flex-grow:0;
@@ -622,6 +811,12 @@ px-0{
     flex-shrink:0;
     flex-basis:auto;
     width:16.6667%;
+  }
+  .col-lg-12{
+    flex-grow:0;
+    flex-shrink:0;
+    flex-basis:auto;
+    width:100%;
   }
 }
 @media (min-width: 1200px){
@@ -712,10 +907,58 @@ px-0{
     width:16.6667%;
   }
 }
+@media (max-width: 576px){
+  .col-xs-12{
+    flex-grow:0;
+    flex-shrink:0;
+    flex-basis:auto;
+    width:100%;
+  }
+}
 @media (max-width: 480px){
+  .mobile{
+    transform:scale(0.2);
+    transform-origin:0px 0px 0px;
+  }
+  .mobile{
+    transform:scale(0.2);
+    transform-origin:0px 0px 0px;
+  }
+  .mobile{
+    transform:scale(0.2);
+    transform-origin:0px 0px 0px;
+  }
+  .mobile{
+    transform:scale(0.2);
+    transform-origin:0px 0px 0px;
+  }
+  .img-wrap{
+    width:3rem;
+    height:2rem;
+    margin-left:30%;
+  }
+  .mobile{
+    transform:scale(0.2);
+    transform-origin:0px 0px 0px;
+  }
   .test_ img{
     width:20%;
     height:20%;
+  }
+  .mobile{
+    transform:scale(0.2);
+    transform-origin:0px 0px 0px;
+  }
+  .main_text_covid{
+    top:calc(95% - 2vh);
+  }
+  .mobile{
+    transform:scale(0.2);
+    transform-origin:0px 0px 0px;
+  }
+  .mobile_logo{
+    transform:scale(0.4);
+    transform-origin:0px 0px 0px;
   }
 }
 @supports (-webkit-text-stroke: 1px black){
@@ -738,16 +981,21 @@ px-0{
 </style>
 </head>
 <body>
-  <div id="i91h">
+  <div id="iqr7">
     <div id="alerte_html_css_covid" class="alerte_html_css_covid">
+      <div class="navbar-brand tablet_logo mobile_logo mobile_l_logo">
+        <img src="dist/images/logo.png" alt="" class="logo"/>
+        <element>NOVATICE
+        </element>
+      </div>
       <div class="main_section_covid">
-        <img src="https://user-images.githubusercontent.com/47604307/223457041-b378a8ac-81ad-4133-998d-5fb9b836f4de.png" class="main"/>
+        <img src="dist/assets/main_covid.png" class="main"/>
         <div class="main_column_covid">
           <div class="tablet mobile_l mobile">
             <div class="col-lg-12 col-md-12 col-sm-12">
               <div class="mx-auto main-section_cov_main">
                 <div class="img-wrap">
-                  <img src="https://user-images.githubusercontent.com/47604307/223457077-91086fc4-e1e2-43c9-88c0-89732ee58fc7.png" class="img_thumb_covid"/>
+                  <img src="dist/assets/thumb_covid1.png" class="img_thumb_covid"/>
                 </div>
                 <div class="col-auto px-0 img-desc_covid m_top">
                   <div> 
@@ -755,17 +1003,17 @@ px-0{
                       <br />
                       UN MASQUE. 
                     </element>
-                    <img src="https://user-images.githubusercontent.com/47604307/223457021-32ccc80e-a5b2-4b64-b02f-34dfb735615d.png" class="bar1"/>
+                    <img src="dist/assets/Calque 3.png" class="bar1"/>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tablet mobile_l mobile">
+          <div class="tablet mobile_l mobile gutter">
             <div class="col-lg-12 col-md-12 col-sm-12">
               <div class="mx-auto main-section_cov_main">
                 <div class="img-wrap">
-                  <img src="https://user-images.githubusercontent.com/47604307/223457079-6c74c1b4-40ac-4af1-967b-78e106f81718.png" class="img_thumb_covid"/>
+                  <img src="dist/assets/thumb_covid2.png" class="img_thumb_covid"/>
                 </div>
                 <div class="col-auto px-0 img-desc_covid m_top">
                   <div> 
@@ -773,27 +1021,27 @@ px-0{
                       <br />
                       LES MAINS. 
                     </element>
-                    <img src="https://user-images.githubusercontent.com/47604307/223457021-32ccc80e-a5b2-4b64-b02f-34dfb735615d.png" class="bar1"/>
+                    <img src="dist/assets/Calque 3.png" class="bar1"/>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tablet mobile_l mobile">
+          <div class="tablet mobile_l mobile gutter">
             <div class="col-lg-12 col-md-12 col-sm-12">
               <div class="mx-auto main-section_cov_main">
                 <div class="img-wrap">
-                  <img src="https://user-images.githubusercontent.com/47604307/223457080-7b158223-8173-458a-8873-a10cdb321b64.png" class="img_thumb_covid"/>
+                  <img src="dist/assets/thumb_covid3.png" class="img_thumb_covid"/>
                 </div>
                 <div class="col-auto px-0 img-desc_covid">
                   <div> 
                     <element> EN CAS
                       <br />
-                      DE SYMPT&Ocirc;MES
+                      DE SYMPTOMES
                       <br />
                       FAITES UN TEST. 
                     </element>
-                    <img src="https://user-images.githubusercontent.com/47604307/223457021-32ccc80e-a5b2-4b64-b02f-34dfb735615d.png" class="bar1 column-last"/>
+                    <img src="dist/assets/Calque 3.png" class="bar1 column-last"/>
                   </div>
                 </div>
               </div>
@@ -812,7 +1060,7 @@ px-0{
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="mx-auto main-section_cov_main">
               <div class="img-wrap">
-                <img src="https://user-images.githubusercontent.com/47604307/223457077-91086fc4-e1e2-43c9-88c0-89732ee58fc7.png" class="img_thumb_covid"/>
+                <img src="dist/assets/thumb_covid1.png" class="img_thumb_covid"/>
               </div>
               <div class="col-auto px-0 img-desc_covid_alt">
                 <div class="tablet mobile_l mobile max_cont"> 
@@ -820,7 +1068,7 @@ px-0{
                     <br />
                     UN MASQUE. 
                   </element>
-                  <img src="https://user-images.githubusercontent.com/47604307/223457021-32ccc80e-a5b2-4b64-b02f-34dfb735615d.png" class="bar1"/>
+                  <img src="dist/assets/Calque 3.png" class="bar1"/>
                 </div>
               </div>
             </div>
@@ -830,14 +1078,14 @@ px-0{
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="mx-auto main-section_cov_main">
               <div class="img-wrap">
-                <img src="https://user-images.githubusercontent.com/47604307/223457079-6c74c1b4-40ac-4af1-967b-78e106f81718.png" class="img_thumb_covid"/>
+                <img src="dist/assets/thumb_covid2.png" class="img_thumb_covid"/>
               </div>
               <div class="col-auto px-0 img-desc_covid_alt">
                 <div class="tablet mobile_l mobile max_cont"> 
                   <element> LAVEZ-VOUS 
                     <br/> LES MAINS. 
                     <element>
-                      <img src="https://user-images.githubusercontent.com/47604307/223457021-32ccc80e-a5b2-4b64-b02f-34dfb735615d.png" class="bar1"/>
+                      <img src="dist/assets/Calque 3.png" class="bar1"/>
                     </element>
                   </element>
                 </div>
@@ -849,17 +1097,17 @@ px-0{
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="mx-auto main-section_cov_main">
               <div class="img-wrap">
-                <img src="https://user-images.githubusercontent.com/47604307/223457080-7b158223-8173-458a-8873-a10cdb321b64.png" class="img_thumb_covid"/>
+                <img src="dist/assets/thumb_covid3.png" class="img_thumb_covid"/>
               </div>
               <div class="col-auto px-0 img-desc_covid_alt">
                 <div class="tablet mobile_l mobile max_cont"> 
                   <element> EN CAS
                     <br />
-                    DE SYMPT&Ocirc;MES
+                    DE SYMPTOMES
                     <br />
                     FAITES UN TEST. 
                   </element>
-                  <img src="https://user-images.githubusercontent.com/47604307/223457021-32ccc80e-a5b2-4b64-b02f-34dfb735615d.png" class="bar1 column-last"/>
+                  <img src="dist/assets/Calque 3.png" class="bar1 column-last"/>
                 </div>
               </div>
             </div>
